@@ -1,9 +1,8 @@
-adfs-plano.txt
-adfs-dev.json
+azure-ad-plano.log
 terraform.tfstate
 **/.terraform/*
 *.tfstate.lock.info
 crash.log
 crash.*.log
 .terraform.lock.hcl
-adfs-dev.json:Zone.Identifier
+azure-ad.json:Zone.Identifier
