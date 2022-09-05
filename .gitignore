@@ -1,0 +1,9 @@
+adfs-plano.txt
+adfs-dev.json
+terraform.tfstate
+**/.terraform/*
+*.tfstate.lock.info
+crash.log
+crash.*.log
+.terraform.lock.hcl
+adfs-dev.json:Zone.Identifier
