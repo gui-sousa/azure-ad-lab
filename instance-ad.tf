@@ -1,10 +1,10 @@
 resource "azurerm_windows_virtual_machine" "instacia-ad" {
-  name                = "instancia-ad"
+  name                = var.hostname
   resource_group_name = azurerm_resource_group.rg-ad.name
   location            = azurerm_resource_group.rg-ad.location
-  size                = "Standard_F2"
-  admin_username      = "gincobiloba"
-  admin_password      = "Ginco@31243536@"
+  size                = var.tipo-vm
+  admin_username      = var.usuario-adm
+  admin_password      = var.senha-adm
 
   network_interface_ids = [
     azurerm_network_interface.nic-ad.id
@@ -18,7 +18,7 @@ resource "azurerm_windows_virtual_machine" "instacia-ad" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = var.versao-windows
     version   = "latest"
   }
 

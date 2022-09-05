@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg-ad" {
   name     = "rg-ad"
-  location = "eastus"
+  location = var.regiao
   tags = {
     environment = "dev"
     source      = "Terraform"
